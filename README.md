@@ -11,5 +11,6 @@ Library to calculate orbital positions of the sun relative to earth.
 
 using Orbit;
 
-SunPosition Sun.Position(double latitude, double longitude, int zone, bool daySavings, DateTime time);
+SunPosition pos;
+pos = Sun.Position(double latitude, double longitude, int zone, bool daySavings, DateTime time);
 ```
