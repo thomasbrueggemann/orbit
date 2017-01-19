@@ -1,6 +1,4 @@
-Orbit
+🛰 Orbit
 =====
 
-Stand: 2011
-
-Library zur Berechnung von orbitalen Positionen z.B. der Sonne relativ zur Erde.
+Library to calculate orbital positions of e.g. the sun relative to earth.
