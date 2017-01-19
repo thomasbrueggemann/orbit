@@ -1,7 +1,7 @@
 🛰 Orbit
 =====
 
-Library to calculate orbital positions of e.g. the sun relative to earth.
+Library to calculate orbital positions of the sun relative to earth.
 
 ## Usage
 
@@ -9,5 +9,7 @@ Library to calculate orbital positions of e.g. the sun relative to earth.
 #include "datetime.hpp";
 #include "sun.hpp"
 
-Sun.SunPosition Position(double latitude, double longitude, int zone, bool daySavings, DateTime time);
+using Orbit;
+
+SunPosition Sun.Position(double latitude, double longitude, int zone, bool daySavings, DateTime time);
 ```
