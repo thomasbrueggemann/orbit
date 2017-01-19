@@ -6,6 +6,45 @@
 
 namespace Orbit
 {
+	// TOOLS
+	class Tools
+	{
+	public:
+
+		// CALC JD
+		static double calcJD (int year, int month, int day)
+		{
+			if (month <= 2) {
+				year -= 1;
+				month += 12;
+			}
+
+			double A = floor(year/100.0);
+			double B = 2 - A + floor(A/4);
+
+			return floor(365.25*(year + 4716)) + floor(30.6001*(month+1)) + day + B - 1524.5;
+		};
+
+
+		// CALC TIME JULIAN CENT
+		static double calcTimeJulianCent(double jd)
+		{
+			return (jd - 2451545.0)/36525.0;
+		};
+
+		// RAD TO DEG
+		static double radToDeg(double angleRad)
+		{
+			return (180.0 * angleRad / M_PI);
+		};
+
+		// DEG TO RAD
+		static double degToRad(double angleDeg)
+		{
+			return (M_PI * angleDeg / 180.0);
+	    };
+	};
+
 	// SUN POSITION
 	class SunPosition
 	{
